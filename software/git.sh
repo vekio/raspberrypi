@@ -7,7 +7,7 @@
 ##################################################################################################################
 
 # Use a .env file to set, eg EMAIL=email@example.com
-set -a; [ -f .env ] && . .env; set +a
+set -a; [ -f ../.env ] && . ../.env; set +a
 
 # Install git
 sudo apt-get update && sudo apt-get install -y git
