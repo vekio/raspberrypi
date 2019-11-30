@@ -1,0 +1,44 @@
+version: "3.7"
+
+# use a .env file to set variables
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    dns: 127.0.0.1
+    restart: unless-stopped
+    links:
+      - unbound
+    ports:
+      - 53:53/tcp
+      - 53:53/udp
+      - 80:80/tcp
+      - 443:443/tcp
+    environment:
+      DNS1: 10.0.0.2#53
+      DNS2: "no"
+      IPv6: "no"
+      WEBPASSWORD: ${PIHOLEWEBPASSWORD}
+      TZ: ${TIMEZONE}
+      PROXY_LOCATION: pihole
+    volumes:
+     - ${VOLUMES}/etc/pihole/:/etc/pihole/
+     - ${VOLUMES}/etc/dnsmasq.d/:/etc/dnsmasq.d/
+    networks:
+     pihole_net:
+       ipv4_address: 10.0.0.3
+
+  unbound:
+     container_name: unbound
+     image: klutchell/unbound:armv7hf
+     restart: unless-stopped
+     networks:
+      pihole_net:
+        ipv4_address: 10.0.0.2
+
+networks:
+  pihole_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.0.0/29
