@@ -1,18 +1,21 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Version   :   1.0
+# Version   :   1.1
 # Author 	:   vekio
 # Purpose   :   set up pi-hole with my own adlist, whitelist, regex
-# Links     :   https://stackoverflow.com/a/4774063
 ##################################################################################################################
 
-# Full path to this script
+# Use a .env file to set, eg EMAIL=email@example.com
+ENVPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/.. >/dev/null 2>&1 && pwd )"
+set -a; [ -f $ENVPATH/.env ] && . $ENVPATH/.env; set +a
+
+# Full path to this lists path
 # so doesnt matter where you clone the repository
 # for run this script
-SCRIPTPAHT="$( cd "$(dirname "$0")"; pwd -P)"
+LISTSPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # Add adlists/regexlist/whitelist to pihole docker volume
-cat $SCRIPTPAHT/adlists.list | sudo tee $VOLUMES/etc/pihole/adlists.list
-cat $SCRIPTPAHT/regex.list | sudo tee $VOLUMES/etc/pihole/regex.list
-cat $SCRIPTPAHT/whitelist.list | sudo tee $VOLUMES/etc/pihole/whitelist.list
+cat $LISTSPATH/adlists.list | sudo tee $VOLUMES/etc/pihole/adlists.list
+cat $LISTSPATH/regex.list | sudo tee $VOLUMES/etc/pihole/regex.list
+cat $LISTSPATH/whitelist.list | sudo tee $VOLUMES/etc/pihole/whitelist.list
