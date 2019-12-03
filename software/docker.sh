@@ -9,10 +9,10 @@
 ##################################################################################################################
 
 # Update the apt package list.
-sudo apt-get update
+sudo apt update
 
 # Install Docker's package dependencies.
-sudo apt-get install -y \
+sudo apt install -y \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -31,17 +31,14 @@ echo "deb [arch=armhf] https://download.docker.com/linux/debian \
     sudo tee /etc/apt/sources.list.d/docker.list
 
 # Update the apt package list (for the new apt repo).
-sudo apt-get update
+sudo apt update
 
 # Install the latest version of Docker CE && Docker Compose
-sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+sudo apt install -y docker-ce docker-ce-cli containerd.io
 
 # Allow your user to access the Docker CLI without needing root access.
 sudo usermod -aG docker $USER
 
 # Install docker-compose using python3 and pip3
-sudo apt-get install python3-pip && \
+sudo apt install python3-pip && \
     sudo pip3 install docker-compose
-
-# Autoremove
-sudo apt-get autoremove -y
