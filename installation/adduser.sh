@@ -24,7 +24,9 @@ sudo mkdir -p /home/$USERNAME/.ssh
 sudo chmod 700 /home/$USERNAME/.ssh
 
 # Add public key
-echo $PUBLICKEY | sudo tee -a /home/$USERNAME/.ssh/authorized_keys
+echo $PUBLICKEY | sudo tee /home/$USERNAME/.ssh/authorized_keys
+# Or you can use your keybase to download your public keys, eg:
+# wget -O keys https://vekio.keybase.pub/keys?dl=1; cat keys | sudo tee /home/$USERNAME/.ssh/authorized_keys; rm keys
 sudo chown -R $USERNAME:$USERNAME /home/$USERNAME/.ssh
 sudo chmod 700 /home/$USERNAME/.ssh
 sudo chmod 600 /home/$USERNAME/.ssh/authorized_keys
