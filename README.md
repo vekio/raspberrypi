@@ -20,17 +20,17 @@ To use the .env files, there is 3 .env file required:
 **software/.env**
 
     # git
-    NAME=
-    EMAIL=
+    NAME=""
+    EMAIL=""
 
 **docker/.env**
 
     # volumes
-    VOLUMES=
+    VOLUMES=""
 
     # pihole
-    PIHOLEWEBPASSWORD=
-    TIMEZONE=
+    PIHOLEWEBPASSWORD=""
+    TIMEZONE=""
 
 **config/.env**
 
@@ -45,3 +45,4 @@ To use the .env files, there is 3 .env file required:
     HDDUUID=""
     MOUNTPOINT=""
     DHCPCD=""
+    TIMEZONE=""
