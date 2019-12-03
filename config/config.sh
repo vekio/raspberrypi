@@ -7,7 +7,7 @@
 ##################################################################################################################
 
 # Use a .env file to set, eg EMAIL=email@example.com
-ENVPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/.. >/dev/null 2>&1 && pwd )"
+ENVPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 set -a; [ -f $ENVPATH/.env ] && . $ENVPATH/.env; set +a
 
 # Set up static ethernet ip. Example:
@@ -29,10 +29,6 @@ echo "dtoverlay=disable-wifi" | sudo tee -a /boot/config.txt
 # Mount HDD called store
 # Check UUID with lsblk -f
 echo "$HDDUUID $MOUNTPOINT ext4 defaults,auto,users,rw,nofail,x-systemd.device-timeout=30 0 0" | sudo tee -a /etc/fstab
-
-##################################################################################################################
-# Finally
-##################################################################################################################
 
 # Change hostname
 sudo cp /etc/hosts /etc/hosts.orig
