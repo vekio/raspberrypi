@@ -11,7 +11,7 @@ ENVPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 set -a; [ -f $ENVPATH/.env ] && . $ENVPATH/.env; set +a
 
 # Install git
-sudo apt update && sudo apt install -y git
+sudo apt-get update && sudo apt-get install -y git
 
 # Set git global config
 git config --global user.name $NAME

@@ -7,7 +7,7 @@
 ##################################################################################################################
 
 # Install OpenSSH
-sudo apt update && sudo apt install -y fail2ban
+sudo apt-get update && sudo apt-get install -y fail2ban
 
 # Copy the original jarl.conf file
 sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local

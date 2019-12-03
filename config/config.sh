@@ -32,8 +32,9 @@ echo "$HDDUUID $MOUNTPOINT ext4 defaults,auto,users,rw,nofail,x-systemd.device-t
 
 # Change hostname
 sudo cp /etc/hosts /etc/hosts.orig
-sed -i 's/raspberrypi/'"$HOSTNAME"'/g' /etc/hosts
+sudo cp /etc/hostname /etc/hostname.orig
 echo "$HOSTNAME" | sudo tee /etc/hostname
+sudo sed -i 's/raspberrypi/'"$HOSTNAME"'/g' /etc/hosts
 
-# Reboot
+# Need reboot
 sudo reboot
