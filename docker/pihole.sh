@@ -18,4 +18,4 @@ PIHOLEPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/pihole >/dev/null 2>&1 && p
 # Add adlists/regexlist/whitelist to pihole docker volume
 cat $PIHOLEPATH/adlists.list | sudo tee $VOLUMES/etc/pihole/adlists.list
 cat $PIHOLEPATH/regex.list | sudo tee $VOLUMES/etc/pihole/regex.list
-cat $PIHOLEPATH/whitelist.list | sudo tee $VOLUMES/etc/pihole/whitelist.list
+cat $PIHOLEPATH/whitelist.txt | sudo tee $VOLUMES/etc/pihole/whitelist.txt
