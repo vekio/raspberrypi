@@ -1,6 +1,6 @@
 version: "3.7"
 
-# use a .env file to set variables
+# Use a .env file to set variables
 services:
   pihole:
     container_name: pihole
