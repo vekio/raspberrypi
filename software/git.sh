@@ -14,5 +14,5 @@ set -a; [ -f $ENVPATH/.env ] && . $ENVPATH/.env; set +a
 sudo apt update && sudo apt install -y git
 
 # Set git global config
-git config --global user.name $USERNAME
+git config --global user.name $NAME
 git config --global user.email $EMAIL
