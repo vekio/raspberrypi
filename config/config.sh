@@ -10,6 +10,9 @@
 ENVPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 set -a; [ -f $ENVPATH/.env ] && . $ENVPATH/.env; set +a
 
+# Set system timezone
+sudo timedatectl set-timezone $TIMEZONE
+
 # Set up static ethernet ip. Example:
 # interface eth0
 # static ip_address=192.168.1.100/24
