@@ -6,7 +6,7 @@
 ##################################################################################################################
 
 # Insall ufw firewall
-sudo apt update && sudo apt install -y ufw
+sudo apt-get update && sudo apt-get install -y ufw
 
 # Enable ufw
 yes | sudo ufw enable

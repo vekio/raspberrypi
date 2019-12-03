@@ -6,6 +6,9 @@
 # Links     :   https://howchoo.com/g/ote2mjkzzta/control-raspberry-pi-fan-temperature-python
 ##################################################################################################################
 
+# Requirements
+sudo pip3 install gpiozero
+
 # Install fan controll scripts
 cd /tmp
 git clone https://github.com/Howchoo/pi-fan-controller.git
