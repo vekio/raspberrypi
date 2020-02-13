@@ -11,7 +11,7 @@
 sudo apt-get update
 
 # install fail2ban
-apt-get install -y fail2ban
+sudo apt-get install -y fail2ban
 
 # copy the original jarl.conf file
 sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
