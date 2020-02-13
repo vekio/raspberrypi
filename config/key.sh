@@ -17,6 +17,7 @@ HIP=""              # host IP or URL
 
 # first run keybase
 run_keybase
+sleep 2s
 
 # generate ssh key
 ssh-keygen -f /keybase/private/vekio/keys/$FNAME -t rsa -b 4096 -C "" -N ''
@@ -25,4 +26,4 @@ ssh-keygen -f /keybase/private/vekio/keys/$FNAME -t rsa -b 4096 -C "" -N ''
 ssh-copy-id -i /keybase/private/vekio/keys/$FNAME.pub pi@$HIP 
 
 # generate .ssh/config profile
-echo -e "# $COMMENT\n  Host $HNAME\n  HostName $HIP\n  User pi\n  IdentifyFile /keybase/private/vekio/keys/$FNAME" > /dev/null 2>&1 | tee -a $HOME/.ssh/config
+echo -e "# $COMMENT\nHost $HNAME\n  HostName $HIP\n  User pi\n  IdentityFile /keybase/private/vekio/keys/$FNAME" | tee -a $HOME/.ssh/config
