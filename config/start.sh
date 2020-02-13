@@ -12,9 +12,16 @@
 TIMEZONE=""             # timezone continent/city
 NETWORK=""              # network eg: "# network\ninterface eth0\nstatic ip_address=192.168.1.100/24\nstatic routers=192.168.1.1\nstatic domain_name_servers=8.8.8.8 8.8.4.4"
 #HOSTNAME=""             # hostname
+HDDUUID=""              # UUID
+MOUNTPOINT=""           # folder to mount, eg:/media/backups
 
 # set system timezone
 sudo timedatectl set-timezone $TIMEZONE
+
+# mount my HDD
+# check UUID with lsblk -f
+echo "$HDDUUID $MOUNTPOINT ext4 defaults,auto,users,rw,nofail,x-systemd.device-timeout=30 0 0" | sudo tee -a /etc/fstab
+
 
 # remove swap
 #sudo dphys-swapfile swapoff && \
