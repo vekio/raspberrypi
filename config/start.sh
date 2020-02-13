@@ -9,10 +9,9 @@
 ##################################################################################################################
 
 # variables
-PASSWORD=""             # password
 TIMEZONE=""             # timezone continent/city
 NETWORK=""              # network eg: "# network\ninterface eth0\nstatic ip_address=192.168.1.100/24\nstatic routers=192.168.1.1\nstatic domain_name_servers=8.8.8.8 8.8.4.4"
-HOSTNAME=""             # hostname
+#HOSTNAME=""             # hostname
 
 # set system timezone
 sudo timedatectl set-timezone $TIMEZONE
@@ -23,12 +22,12 @@ sudo timedatectl set-timezone $TIMEZONE
 #sudo systemctl disable dphys-swapfile
 
 # update && upgrade
-sudo apt update && sudo apt upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 
 # backup original dhcpcd file
 sudo cp /etc/dhcpcd.conf /etc/dhcpcd.conf.bk
 # add the network
-echo -e "$NETWORK" > /dev/null 2>&1 | sudo tee -a /etc/dhcpcd.conf
+echo -e "$NETWORK" | sudo tee -a /etc/dhcpcd.conf
 
 # Change hostname
 #sudo cp /etc/hosts /etc/hosts.bk
@@ -36,5 +35,5 @@ echo -e "$NETWORK" > /dev/null 2>&1 | sudo tee -a /etc/dhcpcd.conf
 #echo "$HOSTNAME" > /dev/null 2>&1 | sudo tee /etc/hostname
 #sudo sed -i 's/raspberrypi/'"$HOSTNAME"'/g' /etc/hosts
 
-# reboot
-sudo reboot
+# change hostname needs reboot
+#sudo reboot
