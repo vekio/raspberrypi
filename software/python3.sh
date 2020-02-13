@@ -10,7 +10,7 @@
 # https://installvirtual.com/how-to-install-python-3-8-on-raspberry-pi-raspbian/
 
 # update the package lists
-sudo apt update
+sudo apt-get update
 
 # install pip3
-sudo apt install -y python3-pip
+sudo apt-get install -y python3-pip
