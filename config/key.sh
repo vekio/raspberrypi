@@ -5,7 +5,8 @@
 # Author	:	vekio
 # Purpose	:	this script generate ssh key and it save it in my keybase account, also create a profile in
 #               ssh/config and upload the public key to the server
-# Comments	:	man passwd: passwd -l, lock the password of the named account
+# Comments	:	passwd -l, lock the password of the named account, still be able to login with ssh key
+#               ssh profiles: https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/
 ##################################################################################################################
 
 # variables
