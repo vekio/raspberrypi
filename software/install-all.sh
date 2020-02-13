@@ -14,14 +14,14 @@ HNAME=""            # host name given in key.sh, check .ssh/config
 SOFTWAREPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 # git
-ssh $HNAME "bash -s" < $ENVPATH/git.sh
+ssh $HNAME "bash -s" < $SOFTWAREPATH/git.sh
 # wiringpi
-ssh $HNAME "bash -s" < $ENVPATH/wiringpi.sh
+ssh $HNAME "bash -s" < $SOFTWAREPATH/wiringpi.sh
 # fan-controller
-ssh $HNAME "bash -s" < $ENVPATH/fan-controller.sh
+ssh $HNAME "bash -s" < $SOFTWAREPATH/fan-controller.sh
 # fail2ban
-ssh $HNAME "bash -s" < $ENVPATH/fail2ban.sh
+ssh $HNAME "bash -s" < $SOFTWAREPATH/fail2ban.sh
 # python
-ssh $HNAME "bash -s" < $ENVPATH/python3.sh
+ssh $HNAME "bash -s" < $SOFTWAREPATH/python3.sh
 # docker
-ssh $HNAME "bash -s" < $ENVPATH/docker.sh
+ssh $HNAME "bash -s" < $SOFTWAREPATH/docker.sh
