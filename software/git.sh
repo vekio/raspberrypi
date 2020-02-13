@@ -12,10 +12,10 @@ NAME=""
 EMAIL=""
 
 # update the package lists
-sudo apt update
+sudo apt-get update
 
 # install git
-sudo apt install -y git
+sudo apt-get install -y git
 
 # git global config
 git config --global user.name $NAME
