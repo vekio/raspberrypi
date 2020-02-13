@@ -18,9 +18,9 @@ HOSTNAME=""             # hostname
 sudo timedatectl set-timezone $TIMEZONE
 
 # remove swap
-# sudo dphys-swapfile swapoff && \
-# sudo dphys-swapfile uninstall && \
-# sudo systemctl disable dphys-swapfile
+#sudo dphys-swapfile swapoff && \
+#sudo dphys-swapfile uninstall && \
+#sudo systemctl disable dphys-swapfile
 
 # update && upgrade
 sudo apt update && sudo apt upgrade -y
@@ -31,10 +31,10 @@ sudo cp /etc/dhcpcd.conf /etc/dhcpcd.conf.bk
 echo -e "$NETWORK" > /dev/null 2>&1 | sudo tee -a /etc/dhcpcd.conf
 
 # Change hostname
-sudo cp /etc/hosts /etc/hosts.bk
-sudo cp /etc/hostname /etc/hostname.bk
-echo "$HOSTNAME" > /dev/null 2>&1 | sudo tee /etc/hostname
-sudo sed -i 's/raspberrypi/'"$HOSTNAME"'/g' /etc/hosts
+#sudo cp /etc/hosts /etc/hosts.bk
+#sudo cp /etc/hostname /etc/hostname.bk
+#echo "$HOSTNAME" > /dev/null 2>&1 | sudo tee /etc/hostname
+#sudo sed -i 's/raspberrypi/'"$HOSTNAME"'/g' /etc/hosts
 
 # reboot
 sudo reboot
