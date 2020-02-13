@@ -17,12 +17,16 @@ CONFIGPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/config >/dev/null 2>&1 && p
 
 # key.sh
 bash $CONFIGPATH/key.sh
+sleep 1s
 
 # start.sh
 ssh $HNAME "bash -s" < $CONFIGPATH/start.sh
+sleep 1s
 
 # ssh.sh
 ssh $HNAME "bash -s" < $CONFIGPATH/ssh.sh
+sleep 1s
 
 # install-all.sh
 bash $SOFTWAREPATH/install-all.sh
+sleep 1s
