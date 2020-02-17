@@ -19,10 +19,13 @@ HIP=""              # host IP or URL
 run_keybase
 sleep 2s
 
+ls /keybase/private/vekio/keys/
+
 # generate ssh key
 ssh-keygen -f /keybase/private/vekio/keys/$FNAME -t rsa -b 4096 -C "" -N ''
 
 # upload the public key to the raspberrypi
+ssh-keygen -f "$HOME/.ssh/known_hosts" -R "$HIP"
 ssh-copy-id -i /keybase/private/vekio/keys/$FNAME.pub pi@$HIP 
 
 # generate .ssh/config profile

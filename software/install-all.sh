@@ -25,3 +25,5 @@ ssh $HNAME "bash -s" < $SOFTWAREPATH/fail2ban.sh
 ssh $HNAME "bash -s" < $SOFTWAREPATH/python3.sh
 # docker
 ssh $HNAME "bash -s" < $SOFTWAREPATH/docker.sh
+# docker
+ssh $HNAME "bash -s" < $SOFTWAREPATH/ufw.sh

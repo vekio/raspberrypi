@@ -34,13 +34,13 @@ echo "deb [arch=armhf] https://download.docker.com/linux/debian \
 sudo apt-get update
 
 # install the latest version of docker ce 
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
 # allow your user to access the docker cli without needing root access
 sudo usermod -aG docker pi
 
 # error installing docker-compose, ffi.h not found
-sudp apt-get install libffi-dev
+sudo apt-get install -y libffi-dev
 
 # install docker-compose using python3 and pip3
 sudo apt-get install -y python3-pip && \

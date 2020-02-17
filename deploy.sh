@@ -27,6 +27,5 @@ sleep 1s
 ssh $HNAME "bash -s" < $CONFIGPATH/ssh.sh
 sleep 1s
 
-# install-all.sh
-bash $SOFTWAREPATH/install-all.sh
-sleep 1s
+# reboot
+sudo reboot

@@ -11,8 +11,8 @@
 # variables
 TIMEZONE=""             # timezone continent/city
 NETWORK=""              # network eg: "# network\ninterface eth0\nstatic ip_address=192.168.1.100/24\nstatic routers=192.168.1.1\nstatic domain_name_servers=8.8.8.8 8.8.4.4"
-#HOSTNAME=""             # hostname
-HDDUUID=""              # UUID
+HOSTNAME=""             # hostname
+HDDUUID=""              # UUID=XXXX-XXXX-XXXX
 MOUNTPOINT=""           # folder to mount, eg:/media/backups
 
 # set system timezone
@@ -36,7 +36,7 @@ sudo cp /etc/dhcpcd.conf /etc/dhcpcd.conf.bk
 # add the network
 echo -e "$NETWORK" | sudo tee -a /etc/dhcpcd.conf
 
-# Change hostname
+# change hostname
 #sudo cp /etc/hosts /etc/hosts.bk
 #sudo cp /etc/hostname /etc/hostname.bk
 #echo "$HOSTNAME" > /dev/null 2>&1 | sudo tee /etc/hostname
