@@ -1,0 +1,14 @@
+Protocol 2
+Port 666
+MaxAuthTries 3
+PermitRootLogin no
+PubkeyAuthentication no
+PasswordAuthentication no
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+UsePAM no
+X11Forwarding yes
+PrintMotd no
+UseDNS no
+AcceptEnv LANG LC_*
+Subsystem sftp /usr/lib/openssh/sftp-server
