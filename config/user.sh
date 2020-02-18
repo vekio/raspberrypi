@@ -12,7 +12,6 @@ GROUPS="adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio
 
 # add new user
 sudo adduser --gecos "" $USERNAME
-sudo passwd $USERNAME
 
 # add new user to system groups
 sudo usermod -aG $GROUPS $USERNAME
