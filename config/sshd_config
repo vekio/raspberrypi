@@ -3,25 +3,15 @@ HostKey /etc/ssh/ssh_host_rsa_key
 HostKey /etc/ssh/ssh_host_dsa_key
 HostKey /etc/ssh/ssh_host_ecdsa_key
 HostKey /etc/ssh/ssh_host_ed25519_key
-SyslogFacility AUTH
-LogLevel INFO
-LoginGraceTime 120
-StrictModes yes
 PubkeyAuthentication yes
-IgnoreRhosts yes
-HostbasedAuthentication no
 PermitEmptyPasswords no
 ChallengeResponseAuthentication no
 X11Forwarding yes
-X11DisplayOffset 10
 PrintMotd no
-PrintLastLog yes
-TCPKeepAlive yes
 AcceptEnv LANG LC_*
 Subsystem sftp /usr/lib/openssh/sftp-server
 UsePAM no
 AllowGroups root ssh
-AddressFamily any
 Port 666
 PermitRootLogin no
 AllowTcpForwarding no
