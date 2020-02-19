@@ -9,6 +9,9 @@
 # update the package lists
 sudo apt-get update
 
+# install ufw
+sudo apt-get install -y ufw
+
 # enable ufw
 yes | sudo ufw enable
 
