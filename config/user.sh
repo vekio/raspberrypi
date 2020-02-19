@@ -3,18 +3,14 @@
 ##################################################################################################################
 # Version	:	1.0
 # Author	:	vekio
-# Purpose	:	add a user to raspbian
+# Purpose	:	add a alberto user to raspbian
 ##################################################################################################################
 
-# variables
-USERNAME="alberto"
-GROUPS="adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi"
-
 # add new user
-sudo adduser --gecos "" $USERNAME
+sudo adduser --gecos "" alberto
 
 # add new user to system groups
-sudo usermod -aG $GROUPS $USERNAME
+sudo usermod -aG adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi alberto
 
 # disable sudo password
-echo "$USERNAME ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/010_pi-nopasswd
+echo "alberto ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers.d/010_pi-nopasswd

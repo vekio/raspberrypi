@@ -7,27 +7,18 @@
 #               also create a profile in ssh/config and upload the public key to the server
 ##################################################################################################################
 
-# variables
-USERNAME=""         # user name
-COMMENT=""          # profile comment
-KEYFILE=""          # key file name
-PROFILE=""          # ssh pronfile name
-IP=""               # host IP or URL
-PORT=""             # port to enable ssh
-KEYBASE=""          # keybase path to your keys
-
 # first run keybase
 run_keybase
-ls $KEYBASE
+ls /keybase/private/vekio/keys
 
 # generate ssh key
-ssh-keygen -f $KEYBASE/$KEYFILE -t rsa -b 4096 -C "" -N ''
+ssh-keygen -f /keybase/private/vekio/keys/cloud -t rsa -b 4096 -C "" -N ''
 
 # remove the know host
-ssh-keygen -f "$HOME/.ssh/known_hosts" -R "$IP"
+ssh-keygen -f "/home/alberto/.ssh/known_hosts" -R "192.168.1.120"
 
 # upload the public key to the raspberrypi
-ssh-copy-id -i $KEYBASE/$KEYFILE.pub $USERNAME@$IP 
+ssh-copy-id -i /keybase/private/vekio/keys/cloud.pub alberto@192.168.1.120
 
 # generate .ssh/config profile
-echo -e "# $COMMENT\nHost $PROFILE\n  HostName $IP\n  Port $PORT\n  User $USERNAME\n  IdentityFile $KEYBASE/$KEYFILE" | tee -a $HOME/.ssh/config
+echo -e "# raspberrypi4\nHost cloud\n  HostName 192.168.1.120\n  Port 666\n  User alberto\n  IdentityFile /keybase/private/vekio/keys/cloud" | tee -a /home/alberto/.ssh/config

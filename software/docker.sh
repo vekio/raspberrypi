@@ -1,11 +1,12 @@
 #!/bin/bash
-
+#
 ##################################################################################################################
 # Version	:	1.0
 # Author	:	vekio
 # Purpose	:	install latest version of docker-ce and docker-compose 
-# Comments	:	https://docs.docker.com/install/linux/docker-ce/debian/
-#				https://docs.docker.com/compose/install/
+# 
+# https://docs.docker.com/install/linux/docker-ce/debian/
+# https://docs.docker.com/compose/install/
 ##################################################################################################################
 
 # update the package lists

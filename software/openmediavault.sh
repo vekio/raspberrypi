@@ -1,10 +1,11 @@
 #!/bin/bash
-
+#
 ##################################################################################################################
 # Version	:	1.0
 # Author	:	vekio
 # Purpose	:	install latest version of openmediavualt
-# Comments	:	https://github.com/OpenMediaVault-Plugin-Developers/installScript/blob/master/README.md
+#
+# https://github.com/OpenMediaVault-Plugin-Developers/installScript/blob/master/README.md
 ##################################################################################################################
 
 # install openmediavault

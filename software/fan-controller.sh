@@ -1,10 +1,11 @@
 #!/bin/bash
-
+#
 ##################################################################################################################
 # Version	:	1.1
 # Author	:	vekio
 # Purpose	:	install a simple fan controller
-# Comments	:	https://howchoo.com/g/ote2mjkzzta/control-raspberry-pi-fan-temperature-python
+# 
+# https://howchoo.com/g/ote2mjkzzta/control-raspberry-pi-fan-temperature-python
 ##################################################################################################################
 
 # update the package lists

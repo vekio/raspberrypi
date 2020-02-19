@@ -3,7 +3,7 @@
 ##################################################################################################################
 # Version	:	1.0
 # Author	:	vekio
-# Purpose	:	install vim on raspbian
+# Purpose	:	install vim
 ##################################################################################################################
 
 # update the package lists
@@ -13,4 +13,4 @@ sudo apt-get update
 sudo apt-get install -y vim
 
 # download my .vimrc
-wget https://raw.githubusercontent.com/vekio/dotfiles/master/vim/.vimrc
+wget -O /home/alberto/.vimrc https://raw.githubusercontent.com/vekio/dotfiles/master/vim/.vimrc
