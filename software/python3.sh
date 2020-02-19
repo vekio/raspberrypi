@@ -8,8 +8,6 @@
 # https://installvirtual.com/how-to-install-python-3-8-on-raspberry-pi-raspbian/
 ##################################################################################################################
 
-
-
 # update the package lists
 sudo apt-get update
 
