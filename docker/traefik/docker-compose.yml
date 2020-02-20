@@ -24,22 +24,25 @@ services:
       - ${DATA}/config.yml:/config.yml:ro
     labels:
       - "traefik.enable=true"
-      # entrada http para el dominio traefik.DOMAIN y la redireccion a https
+      # http redirige a https
       - "traefik.http.routers.traefik.entrypoints=http"
       - "traefik.http.routers.traefik.rule=Host(`traefik.${DOMAIN}`)"
       - "traefik.http.routers.traefik.middlewares=https-redirect@file"
-      # entrada https para el dominio traefik.DOMAIN
+      # https
       - "traefik.http.routers.traefik-secure.entrypoints=https"
       - "traefik.http.routers.traefik-secure.rule=Host(`traefik.${DOMAIN}`)"
-      # identificarse
+      # middlewares
       - "traefik.http.middlewares.traefik-auth.basicauth.users=${USER}:${PASSWORD}"
       - "traefik.http.routers.traefik-secure.middlewares=traefik-auth"
-      # tls
+      # certificados
       - "traefik.http.routers.traefik-secure.tls=true"
       - "traefik.http.routers.traefik-secure.tls.certresolver=doresolver"
-      # dashboard de traefik en el puerto 8080
-      - "traefik.http.services.traefik.loadbalancer.server.port=8080"
+      # dashboard
       - "traefik.http.routers.traefik-secure.service=api@internal"
+      # puerto y red
+      - "traefik.http.services.traefik.loadbalancer.server.port=8080"
+      - "traefik.docker.network=proxy"
 
 networks:
   proxy:
+    external: true
