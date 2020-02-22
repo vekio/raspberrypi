@@ -34,9 +34,7 @@ services:
       - "traefik.http.routers.traefik-secure.entrypoints=https"
       - "traefik.http.routers.traefik-secure.rule=Host(`traefik.${DOMAIN}`)"
       # middlewares
-      - "traefik.http.middlewares.simple-auth.basicauth.users=${USER}:${PASSWORD}"
-      #- "traefik.http.routers.traefik-secure.middlewares=traefik-auth"
-      - "traefik.http.routers.traefik-secure.middlewares=auth-secured@file"
+      - "traefik.http.routers.traefik-secure.middlewares=secured-auth@file"
       # certificados
       - "traefik.http.routers.traefik-secure.tls=true"
       - "traefik.http.routers.traefik-secure.tls.certresolver=doresolver"

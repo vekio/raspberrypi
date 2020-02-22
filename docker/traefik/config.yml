@@ -25,9 +25,13 @@ http:
           - default-whitelist
           - default-headers
     
-    auth-secured:
+    default-auth:
+      basicAuth:
+        usersFile: "./users"
+          
+    secured-auth:
       chain:
         middlewares:
           - default-whitelist
           - default-headers
-          - simple-auth
+          - default-auth
