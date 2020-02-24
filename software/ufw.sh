@@ -21,3 +21,4 @@ sudo ufw allow DNS              # dns
 sudo ufw allow WWW              # http
 sudo ufw allow WWW\ Secure      # https
 sudo ufw allow 2375/tcp         # docker daemon
+sudo ufw allow Samba            # samba
