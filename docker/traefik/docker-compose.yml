@@ -26,21 +26,23 @@ services:
       - "traefik.enable=true"
       # dashboard
       - "traefik.http.routers.traefik-secure.service=api@internal"
-      # http redirige a https
+      # http
       - "traefik.http.routers.traefik.entrypoints=http"
       - "traefik.http.routers.traefik.rule=Host(`traefik.${DOMAIN}`)"
       - "traefik.http.routers.traefik.middlewares=https-redirect@file"
       # https
       - "traefik.http.routers.traefik-secure.entrypoints=https"
       - "traefik.http.routers.traefik-secure.rule=Host(`traefik.${DOMAIN}`)"
-      # middlewares
-      - "traefik.http.routers.traefik-secure.middlewares=secured-auth@file"
       # certificados
       - "traefik.http.routers.traefik-secure.tls=true"
       - "traefik.http.routers.traefik-secure.tls.certresolver=doresolver"
       # puerto y red
       - "traefik.http.services.traefik.loadbalancer.server.port=8080"
       - "traefik.docker.network=proxy"
+      # auth
+      - "traefik.http.middlewares.default-auth.basicauth.users=${USER}:${PASSWORD}"
+      # middlewares
+      - "traefik.http.routers.traefik-secure.middlewares=secured-auth@file"
 
 networks:
   proxy:

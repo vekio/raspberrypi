@@ -1,0 +1,7 @@
+.env format
+
+USER=
+PASSWORD=
+DO_API_KEY=
+DOMAIN=
+DATA=

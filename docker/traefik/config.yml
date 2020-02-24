@@ -24,14 +24,10 @@ http:
         middlewares:
           - default-whitelist
           - default-headers
-    
-    default-auth:
-      basicAuth:
-        usersFile: "./users"
           
     secured-auth:
       chain:
         middlewares:
           - default-whitelist
           - default-headers
-          - default-auth
+          - default-auth@docker
