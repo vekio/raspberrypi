@@ -21,3 +21,14 @@ sudo apt-get install -y libffi-dev libssl-dev python3 python3-pip
 
 # install docker-compose using python3 and pip3
 sudo pip3 install docker-compose
+
+# remove all docker containers and images
+sudo docker rm -f $(docker ps -aq); docker rmi -f $(docker images -q)
+
+# specifying a default docker storage directory manually
+sudo systemctl stop docker
+sudo rm -rf /var/lib/docker
+sudo mkdir /var/lib/docker
+sudo mkdir /home/alberto/dockerdata
+sudo mount --rbind /home/alberto/dockerdata /var/lib/docker
+sudo systemctl start docker
