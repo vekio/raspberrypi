@@ -1,9 +1,10 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Version	:	1.0
-# Author	:	vekio
-# Purpose	:	install ufw and allow some ports
+# Name			:	ufw.sh
+# Author		:	vekio
+# Description	:	install ufw and add some rules
+# Notes			:	
 ##################################################################################################################
 
 # update the package lists

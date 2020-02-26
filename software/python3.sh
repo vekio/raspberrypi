@@ -1,11 +1,10 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Version	:	1.0
-# Author	:	vekio
-# Purpose	:	install latest version of python3 and some needed packages
-#
-# https://installvirtual.com/how-to-install-python-3-8-on-raspberry-pi-raspbian/
+# Name			:	python3.sh
+# Author		:	vekio
+# Description	:	install python3-pip
+# Notes			:	
 ##################################################################################################################
 
 # update the package lists

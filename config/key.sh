@@ -1,10 +1,11 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Version	:	1.1
-# Author	:	vekio
-# Purpose	:	this script generate a ssh key and save it in a keybase account,
-#               also create a profile in ssh/config and upload the public key to the server
+# Name			:	key.sh
+# Author		:	vekio
+# Description	:	this script generate a ssh key and save it in my keybase account
+#                   also create a profile in ssh/config and upload the public key to the server
+# Notes			:	
 ##################################################################################################################
 
 # first run keybase

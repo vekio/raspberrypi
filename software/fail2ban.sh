@@ -1,9 +1,10 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Version	:	1.0
-# Author	:	vekio
-# Purpose	:	install fail2ban
+# Name			:	fail2ban.sh
+# Author		:	vekio
+# Description	:	install fail2ban
+# Notes			:	
 ##################################################################################################################
 
 # update the package lists

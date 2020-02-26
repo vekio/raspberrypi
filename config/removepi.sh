@@ -1,9 +1,10 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Version	:	1.0
-# Author	:	vekio
-# Purpose	:	remove user pi from raspbian
+# Name			:	removepi.sh
+# Author		:	vekio
+# Description	:	remove user pi from raspbian
+# Notes			:	
 ##################################################################################################################
 
 # kill pi user process

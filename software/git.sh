@@ -1,9 +1,10 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Version	:	1.0
-# Author	:	vekio
-# Purpose	:	install git and set global config
+# Name			:	git.sh
+# Author		:	vekio
+# Description	:	install git and set global config
+# Notes			:	
 ##################################################################################################################
 
 # update the package lists

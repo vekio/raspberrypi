@@ -1,13 +1,10 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Version	:	1.0
-# Author	:	vekio
-# Purpose	:	install latest version of wiringpi project
-# 
-# http://wiringpi.com/
-# latest version 2.52: http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b/
-# check version with "gpio -v"
+# Name			:	wirinpi.sh
+# Author		:	vekio
+# Description	:	install wiringpi project
+# Notes			:	check version installed with "gpio -v"
 ##################################################################################################################
 
 # install wiringpi

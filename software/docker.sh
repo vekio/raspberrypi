@@ -1,18 +1,17 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Version	:	2.0
-# Author	:	vekio
-# Purpose	:	install latest version of docker-ce and docker-compose 
-# 
-# https://docs.docker.com/install/linux/docker-ce/debian/
-# https://docs.docker.com/compose/install/
+# Name			:	docker.sh
+# Author		:	vekio
+# Description	:	install docker-ce and docker-compose
+# Notes			:	https://docs.docker.com/install/linux/docker-ce/debian/
+#                   https://docs.docker.com/compose/install/
 ##################################################################################################################
 
 # update the package lists
 sudo apt-get update
 
-# install Docker
+# install docker
 curl -sSL https://get.docker.com | sh
 
 # allow your user to access the docker cli without needing root access

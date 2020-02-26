@@ -1,9 +1,10 @@
 #!/bin/bash
 #
 ##################################################################################################################
-# Version	:	1.0
-# Author	:	vekio
-# Purpose	:	add a alberto user to raspbian
+# Name			:	user.sh
+# Author		:	vekio
+# Description	:	add alberto user to raspbian
+# Notes			:	
 ##################################################################################################################
 
 # add new user
