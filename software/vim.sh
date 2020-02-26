@@ -13,4 +13,4 @@ sudo apt-get update
 sudo apt-get install -y vim
 
 # download my .vimrc
-wget -O /home/alberto/.vimrc https://raw.githubusercontent.com/vekio/dotfiles/master/vim/.vimrc
+wget -O /home/alberto/.vimrc https://raw.githubusercontent.com/vekio/dotfiles/master/.vimrc
